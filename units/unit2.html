@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry 4.0 - Cyber-Physical Systems</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="unit-page">
+    <nav class="unit-nav">
+        <div class="logo" onclick="navigateToUnits()">
+            <span>INDUSTRY</span><span class="highlight">4.0</span>
+        </div>
+        <div class="unit-selector">
+            <div class="unit-tab" data-unit="1" onclick="navigateToUnit(1)">Unit I</div>
+            <div class="unit-tab active" data-unit="2" onclick="navigateToUnit(2)">Unit II</div>
+            <div class="unit-tab" data-unit="3" onclick="navigateToUnit(3)">Unit III</div>
+            <div class="unit-tab" data-unit="4" onclick="navigateToUnit(4)">Unit IV</div>
+        </div>
+    </nav>
+
+    <div class="robot-assistant">
+        <img src="../img/robots/assistant-robot.png" alt="Robot Assistant" class="robot-assistant-img">
+        <div class="robot-controls">
+            <button id="robot-explain" class="robot-btn"><i class="fas fa-comment"></i> Explain</button>
+            <button id="robot-highlight" class="robot-btn"><i class="fas fa-highlighter"></i> Highlight Key Points</button>
+        </div>
+    </div>
+
+    <div class="unit-content">
+        <header class="unit-header">
+            <h1>Unit II: Industry 4.0 and Cyber-Physical Systems</h1>
+            <p class="unit-description">Exploring the integration of physical and digital worlds through cyber-physical systems, next-generation sensors, and advanced technologies.</p>
+        </header>
+
+        <section class="content-section" id="cyber-physical-systems">
+            <h2><i class="fas fa-microchip"></i> Cyber-Physical Systems and Next Generation Sensors</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>What are Cyber-Physical Systems?</h3>
+                    <p>Cyber-Physical Systems (CPS) are integrations of computation, networking, and physical processes. Embedded computers and networks monitor and control the physical processes, with feedback loops where physical processes affect computations and vice versa.</p>
+                    <div class="cps-diagram">
+                        <div class="cps-component physical">
+                            <div class="cps-icon"><i class="fas fa-cogs"></i></div>
+                            <h4>Physical Layer</h4>
+                            <p>Machines, actuators, sensors, and physical components</p>
+                        </div>
+                        <div class="cps-connector"><i class="fas fa-exchange-alt"></i></div>
+                        <div class="cps-component cyber">
+                            <div class="cps-icon"><i class="fas fa-microchip"></i></div>
+                            <h4>Cyber Layer</h4>
+                            <p>Computation, control algorithms, and data analytics</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <h3>Next Generation Sensors</h3>
+                    <p>Advanced sensors are the foundation of cyber-physical systems, providing real-time data about the physical world. Next-generation sensors offer improved accuracy, reliability, and capabilities:</p>
+                    <ul class="feature-list">
+                        <li><span class="highlight">Smart Sensors</span>: Integrated processing capabilities for local data analysis</li>
+                        <li><span class="highlight">MEMS Sensors</span>: Micro-electromechanical systems for miniaturized sensing</li>
+                        <li><span class="highlight">Wireless Sensor Networks</span>: Interconnected sensors that communicate wirelessly</li>
+                        <li><span class="highlight">Multi-modal Sensors</span>: Combining multiple sensing modalities in one device</li>
+                        <li><span class="highlight">Self-powered Sensors</span>: Energy harvesting capabilities for autonomous operation</li>
+                        <li><span class="highlight">Soft Sensors</span>: Software algorithms that estimate difficult-to-measure variables</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="collaborative-platform">
+            <h2><i class="fas fa-project-diagram"></i> Collaborative Platform and Product Lifecycle Management</h2>
+            <div class="plm-diagram">
+                <div class="plm-phase" id="plm-ideation">
+                    <div class="plm-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Ideation & Design</h3>
+                    <ul>
+                        <li>Collaborative design tools</li>
+                        <li>Digital prototyping</li>
+                        <li>Simulation and testing</li>
+                    </ul>
+                </div>
+                <div class="plm-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="plm-phase" id="plm-production">
+                    <div class="plm-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Production</h3>
+                    <ul>
+                        <li>Digital manufacturing</li>
+                        <li>Real-time monitoring</li>
+                        <li>Quality control</li>
+                    </ul>
+                </div>
+                <div class="plm-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="plm-phase" id="plm-distribution">
+                    <div class="plm-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Distribution</h3>
+                    <ul>
+                        <li>Supply chain visibility</li>
+                        <li>Logistics optimization</li>
+                        <li>Inventory management</li>
+                    </ul>
+                </div>
+                <div class="plm-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="plm-phase" id="plm-usage">
+                    <div class="plm-icon"><i class="fas fa-user"></i></div>
+                    <h3>Usage</h3>
+                    <ul>
+                        <li>Product monitoring</li>
+                        <li>Remote diagnostics</li>
+                        <li>User feedback</li>
+                    </ul>
+                </div>
+                <div class="plm-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="plm-phase" id="plm-end">
+                    <div class="plm-icon"><i class="fas fa-recycle"></i></div>
+                    <h3>End of Life</h3>
+                    <ul>
+                        <li>Recycling</li>
+                        <li>Refurbishment</li>
+                        <li>Disposal management</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="plm-benefits">
+                <h3>Benefits of Collaborative PLM in Industry 4.0:</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                        <h4>Reduced Time-to-Market</h4>
+                        <p>Accelerated product development through parallel workflows and real-time collaboration</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Improved Quality</h4>
+                        <p>Better products through integrated testing, simulation, and feedback loops</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <h4>Cost Reduction</h4>
+                        <p>Lower development and production costs through optimization and error reduction</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-sync"></i></div>
+                        <h4>Increased Innovation</h4>
+                        <p>Enhanced creativity through cross-functional collaboration and knowledge sharing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="ar-vr">
+            <h2><i class="fas fa-vr-cardboard"></i> Augmented Reality and Virtual Reality Technologies</h2>
+            <div class="ar-vr-comparison">
+                <div class="ar-section">
+                    <h3>Augmented Reality (AR)</h3>
+                    <div class="ar-image placeholder">AR Visualization</div>
+                    <p>Augmented Reality overlays digital information onto the real world, enhancing the user's perception of reality.</p>
+                    <h4>Industrial Applications:</h4>
+                    <ul>
+                        <li>Assembly guidance with step-by-step instructions</li>
+                        <li>Maintenance support with visual overlays</li>
+                        <li>Quality inspection with defect highlighting</li>
+                        <li>Warehouse picking optimization</li>
+                        <li>Remote expert assistance</li>
+                    </ul>
+                </div>
+                <div class="vr-section">
+                    <h3>Virtual Reality (VR)</h3>
+                    <div class="vr-image placeholder">VR Visualization</div>
+                    <p>Virtual Reality creates a completely immersive digital environment, replacing the user's real-world surroundings.</p>
+                    <h4>Industrial Applications:</h4>
+                    <ul>
+                        <li>Product design and prototyping</li>
+                        <li>Factory layout planning</li>
+                        <li>Safety and operational training</li>
+                        <li>Virtual commissioning of production lines</li>
+                        <li>Customer experience demonstrations</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mr-section">
+                <h3>Mixed Reality (MR) and Digital Twins</h3>
+                <p>Mixed Reality combines elements of both AR and VR, allowing digital objects to interact with the real world. Digital twins are virtual replicas of physical assets that can be used for simulation and optimization.</p>
+                <div class="mr-applications">
+                    <div class="mr-app">
+                        <div class="mr-icon"><i class="fas fa-cogs"></i></div>
+                        <h4>Predictive Maintenance</h4>
+                        <p>Using digital twins to predict equipment failures before they occur</p>
+                    </div>
+                    <div class="mr-app">
+                        <div class="mr-icon"><i class="fas fa-tools"></i></div>
+                        <h4>Complex Assembly</h4>
+                        <p>Guiding workers through complex assembly processes with 3D visualizations</p>
+                    </div>
+                    <div class="mr-app">
+                        <div class="mr-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h4>Immersive Training</h4>
+                        <p>Creating realistic training scenarios without real-world risks</p>
+                    </div>
+                    <div class="mr-app">
+                        <div class="mr-icon"><i class="fas fa-search"></i></div>
+                        <h4>Quality Assurance</h4>
+                        <p>Comparing physical products with their digital specifications</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="artificial-intelligence">
+            <h2><i class="fas fa-brain"></i> Artificial Intelligence</h2>
+            <div class="ai-overview">
+                <p>Artificial Intelligence in Industry 4.0 enables machines to perform tasks that typically require human intelligence. AI systems can learn from data, identify patterns, make decisions, and continuously improve their performance.</p>
+                <div class="ai-types">
+                    <div class="ai-type">
+                        <h3>Machine Learning</h3>
+                        <p>Algorithms that improve automatically through experience and data analysis, without being explicitly programmed.</p>
+                        <div class="ai-applications">
+                            <div class="ai-app">Predictive maintenance</div>
+                            <div class="ai-app">Quality control</div>
+                            <div class="ai-app">Demand forecasting</div>
+                        </div>
+                    </div>
+                    <div class="ai-type">
+                        <h3>Computer Vision</h3>
+                        <p>Systems that can interpret and understand visual information from the world, such as images and videos.</p>
+                        <div class="ai-applications">
+                            <div class="ai-app">Defect detection</div>
+                            <div class="ai-app">Object recognition</div>
+                            <div class="ai-app">Assembly verification</div>
+                        </div>
+                    </div>
+                    <div class="ai-type">
+                        <h3>Natural Language Processing</h3>
+                        <p>Algorithms that enable computers to understand, interpret, and generate human language.</p>
+                        <div class="ai-applications">
+                            <div class="ai-app">Voice-controlled systems</div>
+                            <div class="ai-app">Documentation analysis</div>
+                            <div class="ai-app">Customer service automation</div>
+                        </div>
+                    </div>
+                    <div class="ai-type">
+                        <h3>Reinforcement Learning</h3>
+                        <p>A type of machine learning where agents learn to make decisions by taking actions and receiving rewards or penalties.</p>
+                        <div class="ai-applications">
+                            <div class="ai-app">Process optimization</div>
+                            <div class="ai-app">Autonomous robots</div>
+                            <div class="ai-app">Energy management</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="big-data">
+            <h2><i class="fas fa-database"></i> Big Data Analytics and Advanced Analysis</h2>
+            <div class="big-data-flow">
+                <div class="data-stage" id="data-collection">
+                    <div class="data-icon"><i class="fas fa-download"></i></div>
+                    <h3>Data Collection</h3>
+                    <p>Gathering data from sensors, machines, systems, and external sources</p>
+                </div>
+                <div class="data-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="data-stage" id="data-storage">
+                    <div class="data-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Storage</h3>
+                    <p>Storing data in data lakes, warehouses, and distributed systems</p>
+                </div>
+                <div class="data-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="data-stage" id="data-processing">
+                    <div class="data-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Data Processing</h3>
+                    <p>Cleaning, transforming, and preparing data for analysis</p>
+                </div>
+                <div class="data-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="data-stage" id="data-analysis">
+                    <div class="data-icon"><i class="fas fa-chart-bar"></i></div>
+                    <h3>Data Analysis</h3>
+                    <p>Applying statistical methods and algorithms to extract insights</p>
+                </div>
+                <div class="data-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="data-stage" id="data-visualization">
+                    <div class="data-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Data Visualization</h3>
+                    <p>Presenting insights in visual formats for easier understanding</p>
+                </div>
+                <div class="data-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="data-stage" id="data-action">
+                    <div class="data-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Action</h3>
+                    <p>Making decisions and taking actions based on insights</p>
+                </div>
+            </div>
+            <div class="analytics-types">
+                <h3>Types of Analytics in Industry 4.0:</h3>
+                <div class="analytics-grid">
+                    <div class="analytics-type">
+                        <h4>Descriptive Analytics</h4>
+                        <p>What happened?</p>
+                        <div class="analytics-example">Production output reports, quality metrics, downtime analysis</div>
+                    </div>
+                    <div class="analytics-type">
+                        <h4>Diagnostic Analytics</h4>
+                        <p>Why did it happen?</p>
+                        <div class="analytics-example">Root cause analysis, failure mode analysis, correlation studies</div>
+                    </div>
+                    <div class="analytics-type">
+                        <h4>Predictive Analytics</h4>
+                        <p>What will happen?</p>
+                        <div class="analytics-example">Maintenance predictions, demand forecasting, yield predictions</div>
+                    </div>
+                    <div class="analytics-type">
+                        <h4>Prescriptive Analytics</h4>
+                        <p>What should we do?</p>
+                        <div class="analytics-example">Process optimization recommendations, resource allocation, scheduling</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="cybersecurity">
+            <h2><i class="fas fa-shield-alt"></i> Cybersecurity for Industry 4.0</h2>
+            <div class="security-layers">
+                <div class="security-layer" id="layer-physical-security">
+                    <div class="security-icon"><i class="fas fa-door-closed"></i></div>
+                    <h3>Physical Security</h3>
+                    <p>Protecting physical assets, access controls, and environmental security</p>
+                </div>
+                <div class="security-layer" id="layer-network-security">
+                    <div class="security-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Network Security</h3>
+                    <p>Securing communication networks, firewalls, and intrusion detection</p>
+                </div>
+                <div class="security-layer" id="layer-device-security">
+                    <div class="security-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Device Security</h3>
+                    <p>Securing individual devices, authentication, and access control</p>
+                </div>
+                <div class="security-layer" id="layer-application-security">
+                    <div class="security-icon"><i class="fas fa-code"></i></div>
+                    <h3>Application Security</h3>
+                    <p>Securing software applications, APIs, and services</p>
+                </div>
+                <div class="security-layer" id="layer-data-security">
+                    <div class="security-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Security</h3>
+                    <p>Protecting data through encryption, access controls, and governance</p>
+                </div>
+            </div>
+            <div class="security-challenges">
+                <h3>Cybersecurity Challenges in Industry 4.0:</h3>
+                <div class="challenges-grid">
+                    <div class="challenge-item">
+                        <div class="challenge-icon"><i class="fas fa-plug"></i></div>
+                        <h4>IT/OT Convergence</h4>
+                        <p>Integrating information technology with operational technology creates new security challenges</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon"><i class="fas fa-clock"></i></div>
+                        <h4>Legacy Systems</h4>
+                        <p>Older systems with limited security features must be integrated with modern technologies</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon"><i class="fas fa-wifi"></i></div>
+                        <h4>Expanded Attack Surface</h4>
+                        <p>More connected devices mean more potential entry points for attackers</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <h4>Physical Consequences</h4>
+                        <p>Cyber attacks can have real-world physical impacts on production and safety</p>
+                    </div>
+                </div>
+            </div>
+            <div class="security-strategies">
+                <h3>Security Strategies for Industry 4.0:</h3>
+                <ul class="strategy-list">
+                    <li><span class="highlight">Defense in Depth</span>: Implementing multiple layers of security controls</li>
+                    <li><span class="highlight">Zero Trust Architecture</span>: Verifying every access request regardless of source</li>
+                    <li><span class="highlight">Security by Design</span>: Building security into systems from the beginning</li>
+                    <li><span class="highlight">Continuous Monitoring</span>: Real-time surveillance of systems for anomalies</li>
+                    <li><span class="highlight">Regular Updates</span>: Keeping systems patched and updated</li>
+                    <li><span class="highlight">Employee Training</span>: Educating staff about security best practices</li>
+                    <li><span class="highlight">Incident Response Planning</span>: Preparing for security breaches</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section" id="industrial-iot">
+            <h2><i class="fas fa-network-wired"></i> Introduction to Industrial IoT</h2>
+            <div class="iiot-overview">
+                <p>Industrial Internet of Things (IIoT) refers to the use of IoT technologies in industrial settings. It involves connecting machines, sensors, and systems to collect and exchange data for improved monitoring, control, and optimization of industrial processes.</p>
+                <div class="iiot-components">
+                    <div class="iiot-component" id="iiot-sensing">
+                        <div class="iiot-icon"><i class="fas fa-satellite-dish"></i></div>
+                        <h3>Industrial Sensing</h3>
+                        <p>Sensors that collect data about physical conditions, machine states, and environmental factors</p>
+                    </div>
+                    <div class="iiot-component" id="iiot-actuation">
+                        <div class="iiot-icon"><i class="fas fa-cog"></i></div>
+                        <h3>Industrial Actuation</h3>
+                        <p>Devices that convert electrical signals into physical actions to control industrial processes</p>
+                    </div>
+                    <div class="iiot-component" id="iiot-communication">
+                        <div class="iiot-icon"><i class="fas fa-broadcast-tower"></i></div>
+                        <h3>Communication Networks</h3>
+                        <p>Wired and wireless networks that enable data transmission between devices</p>
+                    </div>
+                    <div class="iiot-component" id="iiot-edge">
+                        <div class="iiot-icon"><i class="fas fa-microchip"></i></div>
+                        <h3>Edge Computing</h3>
+                        <p>Processing data near the source to reduce latency and bandwidth usage</p>
+                    </div>
+                    <div class="iiot-component" id="iiot-cloud">
+                        <div class="iiot-icon"><i class="fas fa-cloud"></i></div>
+                        <h3>Cloud Platforms</h3>
+                        <p>Centralized systems for data storage, processing, and application hosting</p>
+                    </div>
+                    <div class="iiot-component" id="iiot-applications">
+                        <div class="iiot-icon"><i class="fas fa-desktop"></i></div>
+                        <h3>Applications</h3>
+                        <p>Software that analyzes data and provides insights for decision-making</p>
+                    </div>
+                </div>
+            </div>
+            <div class="iiot-benefits">
+                <h3>Benefits of Industrial IoT:</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Increased Productivity</h4>
+                        <p>Optimizing processes and reducing downtime</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-eye"></i></div>
+                        <h4>Enhanced Visibility</h4>
+                        <p>Real-time monitoring of operations and assets</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-tools"></i></div>
+                        <h4>Predictive Maintenance</h4>
+                        <p>Anticipating equipment failures before they occur</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h4>Energy Efficiency</h4>
+                        <p>Optimizing energy consumption in industrial processes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="unit-footer">
+        <div class="navigation-buttons">
+            <button class="nav-btn back-btn" onclick="navigateToUnit(1)"><i class="fas fa-arrow-left"></i> Previous Unit</button>
+            <button class="nav-btn units-btn" onclick="navigateToUnits()"><i class="fas fa-th"></i> All Units</button>
+            <button class="nav-btn next-btn" onclick="navigateToUnit(3)">Next Unit <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

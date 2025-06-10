@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry 4.0 - Tools of Industry 4.0</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="unit-page">
+    <nav class="unit-nav">
+        <div class="logo" onclick="navigateToUnits()">
+            <span>INDUSTRY</span><span class="highlight">4.0</span>
+        </div>
+        <div class="unit-selector">
+            <div class="unit-tab" data-unit="1" onclick="navigateToUnit(1)">Unit I</div>
+            <div class="unit-tab" data-unit="2" onclick="navigateToUnit(2)">Unit II</div>
+            <div class="unit-tab" data-unit="3" onclick="navigateToUnit(3)">Unit III</div>
+            <div class="unit-tab active" data-unit="4" onclick="navigateToUnit(4)">Unit IV</div>
+        </div>
+    </nav>
+
+    <div class="robot-assistant">
+        <img src="../img/robots/assistant-robot.png" alt="Robot Assistant" class="robot-assistant-img">
+        <div class="robot-controls">
+            <button id="robot-explain" class="robot-btn"><i class="fas fa-comment"></i> Explain</button>
+            <button id="robot-highlight" class="robot-btn"><i class="fas fa-highlighter"></i> Highlight Key Points</button>
+        </div>
+    </div>
+
+    <div class="unit-content">
+        <header class="unit-header">
+            <h1>Unit IV: Tools of Industry 4.0</h1>
+            <p class="unit-description">Exploring the technological pillars that enable the fourth industrial revolution and their impact on business, government, and society.</p>
+        </header>
+
+        <section class="content-section" id="tools-overview">
+            <h2><i class="fas fa-tools"></i> Tools for Industry 4.0</h2>
+            <div class="tools-grid">
+                <div class="tool-card" id="ai-tool">
+                    <div class="tool-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>AI enables machines to learn from experience, adjust to new inputs, and perform human-like tasks. In Industry 4.0, AI powers predictive maintenance, quality control, and autonomous decision-making systems.</p>
+                    <div class="tool-examples">
+                        <h4>Key Applications:</h4>
+                        <ul>
+                            <li>Predictive maintenance systems</li>
+                            <li>Quality control automation</li>
+                            <li>Process optimization</li>
+                            <li>Autonomous robotics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="big-data-tool">
+                    <div class="tool-icon"><i class="fas fa-database"></i></div>
+                    <h3>Big Data Analytics</h3>
+                    <p>Big Data Analytics involves examining large data sets to uncover hidden patterns, correlations, and insights. In manufacturing, it enables real-time monitoring, predictive analytics, and data-driven decision making.</p>
+                    <div class="tool-examples">
+                        <h4>Key Applications:</h4>
+                        <ul>
+                            <li>Production optimization</li>
+                            <li>Supply chain visibility</li>
+                            <li>Customer insights</li>
+                            <li>Predictive maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="ml-tool">
+                    <div class="tool-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Machine Learning</h3>
+                    <p>Machine Learning is a subset of AI that enables systems to automatically learn and improve from experience. In Industry 4.0, ML algorithms analyze production data to optimize processes and predict outcomes.</p>
+                    <div class="tool-examples">
+                        <h4>Key Applications:</h4>
+                        <ul>
+                            <li>Anomaly detection</li>
+                            <li>Process optimization</li>
+                            <li>Demand forecasting</li>
+                            <li>Quality prediction</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="cloud-tool">
+                    <div class="tool-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Computing</h3>
+                    <p>Cloud Computing provides on-demand access to computing resources over the internet. It enables scalable data storage, processing, and application deployment for Industry 4.0 implementations.</p>
+                    <div class="tool-examples">
+                        <h4>Key Applications:</h4>
+                        <ul>
+                            <li>Manufacturing execution systems</li>
+                            <li>Remote monitoring</li>
+                            <li>Data storage and processing</li>
+                            <li>Software-as-a-Service solutions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="security-tool">
+                    <div class="tool-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Cybersecurity</h3>
+                    <p>Cybersecurity involves protecting systems, networks, and data from digital attacks. As Industry 4.0 increases connectivity, robust security measures are essential to protect intellectual property and operational technology.</p>
+                    <div class="tool-examples">
+                        <h4>Key Applications:</h4>
+                        <ul>
+                            <li>OT/IT security integration</li>
+                            <li>Secure communication protocols</li>
+                            <li>Access control systems</li>
+                            <li>Threat detection and response</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="vr-ar-tool">
+                    <div class="tool-icon"><i class="fas fa-vr-cardboard"></i></div>
+                    <h3>Virtual & Augmented Reality</h3>
+                    <p>VR and AR technologies create immersive digital experiences. In manufacturing, they enable virtual training, remote assistance, and enhanced visualization of complex processes and products.</p>
+                    <div class="tool-examples">
+                        <h4>Key Applications:</h4>
+                        <ul>
+                            <li>Operator training</li>
+                            <li>Remote maintenance assistance</li>
+                            <li>Product design visualization</li>
+                            <li>Assembly guidance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="iot-tool">
+                    <div class="tool-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Internet of Things</h3>
+                    <p>IoT connects physical devices to the internet, enabling them to collect and exchange data. In Industry 4.0, IoT creates smart factories where machines, products, and systems communicate and cooperate.</p>
+                    <div class="tool-examples">
+                        <h4>Key Applications:</h4>
+                        <ul>
+                            <li>Real-time monitoring</li>
+                            <li>Asset tracking</li>
+                            <li>Predictive maintenance</li>
+                            <li>Energy management</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tool-card" id="robotics-tool">
+                    <div class="tool-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Robotics</h3>
+                    <p>Advanced robotics in Industry 4.0 includes collaborative robots (cobots) that work alongside humans, autonomous mobile robots, and highly flexible robotic systems that can be quickly reprogrammed for different tasks.</p>
+                    <div class="tool-examples">
+                        <h4>Key Applications:</h4>
+                        <ul>
+                            <li>Collaborative assembly</li>
+                            <li>Autonomous material handling</li>
+                            <li>Precision manufacturing</li>
+                            <li>Hazardous environment operations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="application-domains">
+            <h2><i class="fas fa-industry"></i> Application Domains of Industrial IoT</h2>
+            
+            <div class="domain-container">
+                <div class="domain-card" id="manufacturing-domain">
+                    <div class="domain-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Manufacturing</h3>
+                    <p>IIoT transforms manufacturing through smart factories, connected machines, and data-driven optimization. Key applications include:</p>
+                    <ul>
+                        <li>Real-time production monitoring</li>
+                        <li>Predictive maintenance</li>
+                        <li>Quality control automation</li>
+                        <li>Supply chain integration</li>
+                        <li>Energy optimization</li>
+                    </ul>
+                </div>
+
+                <div class="domain-card" id="healthcare-domain">
+                    <div class="domain-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Healthcare</h3>
+                    <p>IIoT revolutionizes healthcare through connected medical devices and smart hospital infrastructure. Key applications include:</p>
+                    <ul>
+                        <li>Remote patient monitoring</li>
+                        <li>Medical equipment tracking</li>
+                        <li>Medication management</li>
+                        <li>Hospital resource optimization</li>
+                        <li>Predictive maintenance for medical equipment</li>
+                    </ul>
+                </div>
+
+                <div class="domain-card" id="education-domain">
+                    <div class="domain-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Education</h3>
+                    <p>IIoT enhances education through smart campuses and connected learning environments. Key applications include:</p>
+                    <ul>
+                        <li>Smart classrooms with interactive technology</li>
+                        <li>Campus energy management</li>
+                        <li>Student attendance and engagement tracking</li>
+                        <li>Laboratory equipment monitoring</li>
+                        <li>Personalized learning environments</li>
+                    </ul>
+                </div>
+
+                <div class="domain-card" id="aerospace-domain">
+                    <div class="domain-icon"><i class="fas fa-plane"></i></div>
+                    <h3>Aerospace and Defense</h3>
+                    <p>IIoT enhances aerospace manufacturing, maintenance, and operations. Key applications include:</p>
+                    <ul>
+                        <li>Aircraft health monitoring</li>
+                        <li>Predictive maintenance for aircraft</li>
+                        <li>Supply chain visibility</li>
+                        <li>Manufacturing quality assurance</li>
+                        <li>Fleet management optimization</li>
+                    </ul>
+                </div>
+
+                <div class="domain-card" id="agriculture-domain">
+                    <div class="domain-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Agriculture</h3>
+                    <p>IIoT enables precision agriculture and smart farming practices. Key applications include:</p>
+                    <ul>
+                        <li>Precision irrigation systems</li>
+                        <li>Crop monitoring and management</li>
+                        <li>Livestock tracking and health monitoring</li>
+                        <li>Automated farm equipment</li>
+                        <li>Supply chain traceability</li>
+                    </ul>
+                </div>
+
+                <div class="domain-card" id="transportation-domain">
+                    <div class="domain-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Transportation and Logistics</h3>
+                    <p>IIoT optimizes transportation networks and logistics operations. Key applications include:</p>
+                    <ul>
+                        <li>Fleet management and tracking</li>
+                        <li>Predictive maintenance for vehicles</li>
+                        <li>Route optimization</li>
+                        <li>Warehouse automation</li>
+                        <li>Cold chain monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="societal-impact">
+            <h2><i class="fas fa-globe"></i> Impact of Industry 4.0 on Society</h2>
+            
+            <div class="impact-container">
+                <div class="impact-card" id="business-impact">
+                    <h3><i class="fas fa-briefcase"></i> Impact on Business</h3>
+                    <div class="impact-content">
+                        <p>Industry 4.0 is transforming business models, operations, and competitive landscapes:</p>
+                        <ul>
+                            <li><strong>New Business Models:</strong> Shift from product-centric to service-oriented models (Product-as-a-Service)</li>
+                            <li><strong>Operational Efficiency:</strong> Streamlined processes, reduced downtime, and optimized resource utilization</li>
+                            <li><strong>Supply Chain Transformation:</strong> Greater visibility, flexibility, and resilience</li>
+                            <li><strong>Customer Experience:</strong> Personalized products, faster delivery, and improved quality</li>
+                            <li><strong>Workforce Transformation:</strong> New roles, skills requirements, and organizational structures</li>
+                            <li><strong>Competitive Advantage:</strong> Data-driven decision making and innovation acceleration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="impact-card" id="government-impact">
+                    <h3><i class="fas fa-landmark"></i> Impact on Government</h3>
+                    <div class="impact-content">
+                        <p>Governments worldwide are adapting policies and infrastructure to support Industry 4.0:</p>
+                        <ul>
+                            <li><strong>Industrial Policy:</strong> Development of national Industry 4.0 strategies and initiatives</li>
+                            <li><strong>Infrastructure Investment:</strong> Expansion of digital infrastructure and connectivity</li>
+                            <li><strong>Regulatory Frameworks:</strong> Updates to address data privacy, cybersecurity, and standards</li>
+                            <li><strong>Education Reform:</strong> Curriculum updates to develop digital skills and technical expertise</li>
+                            <li><strong>Research Funding:</strong> Support for Industry 4.0 technologies and applications</li>
+                            <li><strong>Public Services:</strong> Digitalization of government services and smart city initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="impact-card" id="society-impact">
+                    <h3><i class="fas fa-users"></i> Impact on Society</h3>
+                    <div class="impact-content">
+                        <p>The fourth industrial revolution is reshaping society in profound ways:</p>
+                        <ul>
+                            <li><strong>Employment Landscape:</strong> Job displacement in some sectors, creation of new roles in others</li>
+                            <li><strong>Skills Gap:</strong> Need for continuous learning and digital literacy</li>
+                            <li><strong>Work-Life Balance:</strong> Remote work opportunities and flexible manufacturing</li>
+                            <li><strong>Economic Inequality:</strong> Potential widening of gaps between digital haves and have-nots</li>
+                            <li><strong>Sustainability:</strong> More efficient resource utilization and reduced environmental impact</li>
+                            <li><strong>Ethical Considerations:</strong> Questions around AI decision-making, privacy, and automation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="future-trends">
+            <h2><i class="fas fa-rocket"></i> Future Trends and Emerging Technologies</h2>
+            
+            <div class="trends-container">
+                <div class="trend-card">
+                    <h3>Digital Twins</h3>
+                    <p>Virtual replicas of physical assets that enable real-time monitoring, simulation, and optimization of products and processes.</p>
+                </div>
+                
+                <div class="trend-card">
+                    <h3>Edge Computing</h3>
+                    <p>Processing data closer to its source to reduce latency, bandwidth usage, and enable real-time decision making in industrial environments.</p>
+                </div>
+                
+                <div class="trend-card">
+                    <h3>5G Connectivity</h3>
+                    <p>Ultra-fast, low-latency wireless networks that will enable more connected devices and real-time applications in industrial settings.</p>
+                </div>
+                
+                <div class="trend-card">
+                    <h3>Quantum Computing</h3>
+                    <p>Next-generation computing that could solve complex industrial optimization problems beyond the capabilities of classical computers.</p>
+                </div>
+                
+                <div class="trend-card">
+                    <h3>Blockchain in Manufacturing</h3>
+                    <p>Distributed ledger technology that can enhance supply chain transparency, product authenticity verification, and secure data sharing.</p>
+                </div>
+                
+                <div class="trend-card">
+                    <h3>Human-Machine Collaboration</h3>
+                    <p>Advanced interfaces and collaborative robots that enhance human capabilities rather than replacing human workers.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="unit-footer">
+        <div class="navigation-controls">
+            <button class="nav-btn prev-unit" onclick="navigateToUnit(3)"><i class="fas fa-arrow-left"></i> Previous Unit</button>
+            <button class="nav-btn units-menu" onclick="navigateToUnits()"><i class="fas fa-th"></i> Units Menu</button>
+            <button class="nav-btn next-unit" onclick="navigateToUnit(1)">Next Unit <i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="footer-info">
+            <p>&copy; 2023 Industry 4.0 Educational Portal | Designed for advanced learning</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

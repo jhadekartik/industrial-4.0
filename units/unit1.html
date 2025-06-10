@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry 4.0 - Introduction</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="unit-page">
+    <nav class="unit-nav">
+        <div class="logo" onclick="navigateToUnits()">
+            <span>INDUSTRY</span><span class="highlight">4.0</span>
+        </div>
+        <div class="unit-selector">
+            <div class="unit-tab active" data-unit="1" onclick="navigateToUnit(1)">Unit I</div>
+            <div class="unit-tab" data-unit="2" onclick="navigateToUnit(2)">Unit II</div>
+            <div class="unit-tab" data-unit="3" onclick="navigateToUnit(3)">Unit III</div>
+            <div class="unit-tab" data-unit="4" onclick="navigateToUnit(4)">Unit IV</div>
+        </div>
+    </nav>
+
+    <div class="robot-assistant">
+        <img src="../img/robots/assistant-robot.png" alt="Robot Assistant" class="robot-assistant-img">
+        <div class="robot-controls">
+            <button id="robot-explain" class="robot-btn"><i class="fas fa-comment"></i> Explain</button>
+            <button id="robot-highlight" class="robot-btn"><i class="fas fa-highlighter"></i> Highlight Key Points</button>
+        </div>
+    </div>
+
+    <div class="unit-content">
+        <header class="unit-header">
+            <h1>Unit I: Introduction to Industry 4.0</h1>
+            <p class="unit-description">Exploring the goals, design principles, historical context, and framework of the fourth industrial revolution.</p>
+        </header>
+
+        <section class="content-section" id="goals-principles">
+            <h2><i class="fas fa-bullseye"></i> Goals and Design Principles</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>Core Goals</h3>
+                    <p>Industry 4.0 aims to create intelligent factories with adaptive, self-optimizing production systems. The primary goals include:</p>
+                    <ul class="feature-list">
+                        <li><span class="highlight">Increased Efficiency</span>: Optimizing production processes through automation and data exchange</li>
+                        <li><span class="highlight">Flexibility</span>: Creating adaptable manufacturing systems that can quickly respond to changes</li>
+                        <li><span class="highlight">Customization</span>: Enabling mass customization of products at mass production costs</li>
+                        <li><span class="highlight">Innovation</span>: Accelerating the development of new products and services</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>Design Principles</h3>
+                    <p>The six design principles of Industry 4.0 guide the implementation of smart factories:</p>
+                    <ul class="feature-list">
+                        <li><span class="highlight">Interoperability</span>: Machines, devices, sensors, and people connect and communicate with each other</li>
+                        <li><span class="highlight">Information Transparency</span>: Systems create a virtual copy of the physical world through sensor data</li>
+                        <li><span class="highlight">Technical Assistance</span>: Systems support humans in making decisions and solving problems</li>
+                        <li><span class="highlight">Decentralized Decisions</span>: Cyber-physical systems make decisions on their own</li>
+                        <li><span class="highlight">Virtualization</span>: Creating virtual models of smart factories</li>
+                        <li><span class="highlight">Modularity</span>: Flexible adaptation to changing requirements</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="historical-context">
+            <h2><i class="fas fa-history"></i> Historical Context</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-steam"></i></div>
+                    <div class="timeline-content">
+                        <h3>Industry 1.0 (Late 18th Century)</h3>
+                        <p>The first industrial revolution introduced mechanical production equipment powered by water and steam. It marked the transition from hand production to machine manufacturing.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="timeline-content">
+                        <h3>Industry 2.0 (Late 19th Century)</h3>
+                        <p>The second industrial revolution introduced electrically-powered mass production based on the division of labor. Assembly lines revolutionized manufacturing processes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="fas fa-microchip"></i></div>
+                    <div class="timeline-content">
+                        <h3>Industry 3.0 (1970s)</h3>
+                        <p>The third industrial revolution introduced electronics and IT systems to further automate production. Programmable Logic Controllers (PLCs) enabled advanced automation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item active">
+                    <div class="timeline-icon"><i class="fas fa-network-wired"></i></div>
+                    <div class="timeline-content">
+                        <h3>Industry 4.0 (2010s)</h3>
+                        <p>The fourth industrial revolution builds on the digital revolution, characterized by a fusion of technologies that blurs the lines between physical, digital, and biological spheres.</p>
+                    </div>
+                </div>
+                <div class="timeline-item future">
+                    <div class="timeline-icon"><i class="fas fa-brain"></i></div>
+                    <div class="timeline-content">
+                        <h3>Industry 5.0 (Emerging)</h3>
+                        <p>The fifth industrial revolution focuses on the collaboration between humans and machines, emphasizing personalization and human-centric approaches to technology.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="framework">
+            <h2><i class="fas fa-cubes"></i> General Framework</h2>
+            <div class="framework-diagram">
+                <div class="framework-layer" id="layer-physical">
+                    <h3>Physical Layer</h3>
+                    <div class="framework-items">
+                        <div class="framework-item">Smart Sensors</div>
+                        <div class="framework-item">Actuators</div>
+                        <div class="framework-item">Machines</div>
+                        <div class="framework-item">Robots</div>
+                    </div>
+                </div>
+                <div class="framework-layer" id="layer-connectivity">
+                    <h3>Connectivity Layer</h3>
+                    <div class="framework-items">
+                        <div class="framework-item">Industrial Networks</div>
+                        <div class="framework-item">IoT Gateways</div>
+                        <div class="framework-item">Communication Protocols</div>
+                    </div>
+                </div>
+                <div class="framework-layer" id="layer-data">
+                    <h3>Data Layer</h3>
+                    <div class="framework-items">
+                        <div class="framework-item">Data Storage</div>
+                        <div class="framework-item">Data Processing</div>
+                        <div class="framework-item">Big Data Analytics</div>
+                    </div>
+                </div>
+                <div class="framework-layer" id="layer-application">
+                    <h3>Application Layer</h3>
+                    <div class="framework-items">
+                        <div class="framework-item">Business Intelligence</div>
+                        <div class="framework-item">Decision Support</div>
+                        <div class="framework-item">Process Optimization</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="need">
+            <h2><i class="fas fa-question-circle"></i> Need of Industry 4.0</h2>
+            <div class="need-cards">
+                <div class="need-card">
+                    <div class="need-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Economic Pressures</h3>
+                    <p>Global competition, shorter product lifecycles, and demand for customization require more flexible and efficient production systems.</p>
+                </div>
+                <div class="need-card">
+                    <div class="need-icon"><i class="fas fa-users"></i></div>
+                    <h3>Demographic Changes</h3>
+                    <p>Aging workforce and skills gaps necessitate smarter assistance systems and knowledge transfer solutions.</p>
+                </div>
+                <div class="need-card">
+                    <div class="need-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Sustainability</h3>
+                    <p>Resource scarcity and environmental regulations drive the need for more efficient, less wasteful production processes.</p>
+                </div>
+                <div class="need-card">
+                    <div class="need-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Technological Advancement</h3>
+                    <p>Emerging technologies enable new capabilities that can transform manufacturing and create competitive advantages.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="application-areas">
+            <h2><i class="fas fa-industry"></i> Application Areas</h2>
+            <div class="application-grid">
+                <div class="application-card">
+                    <div class="application-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Smart Manufacturing</h3>
+                    <p>Intelligent production systems that can monitor, control, and optimize manufacturing processes in real-time.</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Smart Supply Chain</h3>
+                    <p>End-to-end visibility and control of the supply chain, enabling real-time tracking and optimization.</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Predictive Maintenance</h3>
+                    <p>Using sensors and data analytics to predict equipment failures before they occur, reducing downtime.</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon"><i class="fas fa-box"></i></div>
+                    <h3>Product Customization</h3>
+                    <p>Flexible manufacturing systems that can produce customized products at mass production efficiency.</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Quality Assurance</h3>
+                    <p>Automated inspection systems that can detect defects and ensure product quality.</p>
+                </div>
+                <div class="application-card">
+                    <div class="application-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Innovation Acceleration</h3>
+                    <p>Digital twins and simulation tools that speed up product development and testing.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="current-situation">
+            <h2><i class="fas fa-globe"></i> Current Situation of Industry 4.0</h2>
+            <div class="situation-content">
+                <div class="situation-text">
+                    <p>Industry 4.0 is currently in various stages of implementation across different regions and sectors. While some advanced manufacturers have embraced comprehensive digital transformation, many are still in the early phases of adoption.</p>
+                    <h3>Key Trends:</h3>
+                    <ul>
+                        <li>Increasing investment in IoT and connected devices in manufacturing</li>
+                        <li>Growing adoption of cloud computing and edge computing in industrial settings</li>
+                        <li>Rising implementation of digital twins for product and process optimization</li>
+                        <li>Expanding use of AI and machine learning for predictive analytics</li>
+                        <li>Developing standards and frameworks for interoperability</li>
+                    </ul>
+                    <h3>Challenges:</h3>
+                    <ul>
+                        <li>High implementation costs, especially for small and medium enterprises</li>
+                        <li>Cybersecurity concerns with increased connectivity</li>
+                        <li>Skills gaps and workforce training needs</li>
+                        <li>Legacy system integration difficulties</li>
+                        <li>Data management and governance issues</li>
+                    </ul>
+                </div>
+                <div class="situation-chart">
+                    <h3>Global Industry 4.0 Market Growth</h3>
+                    <div class="chart-placeholder">
+                        <div class="chart-bar" style="height: 20%;"><span>2018</span></div>
+                        <div class="chart-bar" style="height: 35%;"><span>2019</span></div>
+                        <div class="chart-bar" style="height: 50%;"><span>2020</span></div>
+                        <div class="chart-bar" style="height: 65%;"><span>2021</span></div>
+                        <div class="chart-bar" style="height: 80%;"><span>2022</span></div>
+                        <div class="chart-bar future" style="height: 95%;"><span>2023</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="disciplines">
+            <h2><i class="fas fa-graduation-cap"></i> Contributing Disciplines</h2>
+            <div class="disciplines-wheel">
+                <div class="discipline-item" style="--rotation: 0deg;">
+                    <div class="discipline-icon"><i class="fas fa-microchip"></i></div>
+                    <h3>Computer Science</h3>
+                    <p>Algorithms, software engineering, and computational methods</p>
+                </div>
+                <div class="discipline-item" style="--rotation: 45deg;">
+                    <div class="discipline-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>Mechanical Engineering</h3>
+                    <p>Machine design, robotics, and automation systems</p>
+                </div>
+                <div class="discipline-item" style="--rotation: 90deg;">
+                    <div class="discipline-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Electrical Engineering</h3>
+                    <p>Sensors, control systems, and power electronics</p>
+                </div>
+                <div class="discipline-item" style="--rotation: 135deg;">
+                    <div class="discipline-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Communications</h3>
+                    <p>Networking, protocols, and wireless technologies</p>
+                </div>
+                <div class="discipline-item" style="--rotation: 180deg;">
+                    <div class="discipline-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Science</h3>
+                    <p>Big data analytics, machine learning, and AI</p>
+                </div>
+                <div class="discipline-item" style="--rotation: 225deg;">
+                    <div class="discipline-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Cybersecurity</h3>
+                    <p>Security protocols, threat detection, and risk management</p>
+                </div>
+                <div class="discipline-item" style="--rotation: 270deg;">
+                    <div class="discipline-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3>Human Factors</h3>
+                    <p>Human-machine interaction, ergonomics, and user experience</p>
+                </div>
+                <div class="discipline-item" style="--rotation: 315deg;">
+                    <div class="discipline-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Business Management</h3>
+                    <p>Process optimization, change management, and business models</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="industry5">
+            <h2><i class="fas fa-forward"></i> From Industry 4.0 to Industry 5.0</h2>
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comparison-cell">Aspect</div>
+                    <div class="comparison-cell">Industry 4.0</div>
+                    <div class="comparison-cell">Industry 5.0</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Focus</div>
+                    <div class="comparison-cell">Connectivity and automation</div>
+                    <div class="comparison-cell">Human-machine collaboration</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Value Creation</div>
+                    <div class="comparison-cell">Efficiency and productivity</div>
+                    <div class="comparison-cell">Human-centric value and sustainability</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Technology Role</div>
+                    <div class="comparison-cell">Technology as driver</div>
+                    <div class="comparison-cell">Technology as enabler</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Production Approach</div>
+                    <div class="comparison-cell">Mass customization</div>
+                    <div class="comparison-cell">Personalization and craftsmanship</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Workforce</div>
+                    <div class="comparison-cell">Humans supervising machines</div>
+                    <div class="comparison-cell">Humans working alongside machines</div>
+                </div>
+                <div class="comparison-row">
+                    <div class="comparison-cell">Decision Making</div>
+                    <div class="comparison-cell">Data-driven automation</div>
+                    <div class="comparison-cell">Human judgment enhanced by AI</div>
+                </div>
+            </div>
+            <div class="industry5-advances">
+                <h3>Key Advances in Industry 5.0:</h3>
+                <ul>
+                    <li><span class="highlight">Cobots</span>: Collaborative robots designed to work safely alongside humans</li>
+                    <li><span class="highlight">Bioinspired Systems</span>: Technologies that mimic biological processes and structures</li>
+                    <li><span class="highlight">Cognitive Computing</span>: Systems that can understand, reason, and learn like humans</li>
+                    <li><span class="highlight">Circular Economy Integration</span>: Embedding sustainability into manufacturing processes</li>
+                    <li><span class="highlight">Human-Machine Interfaces</span>: Advanced interfaces that enable intuitive interaction</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <footer class="unit-footer">
+        <div class="navigation-buttons">
+            <button class="nav-btn back-btn" onclick="navigateToUnits()"><i class="fas fa-arrow-left"></i> Back to Units</button>
+            <button class="nav-btn next-btn" onclick="navigateToUnit(2)">Next Unit <i class="fas fa-arrow-right"></i></button>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/quiz.js"></script>
+</body>
+</html>
