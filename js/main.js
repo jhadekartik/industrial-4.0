@@ -237,3 +237,19 @@ function getCurrentUnitNumber() {
     
     return null;
 }
+
+// Add this function to main.js
+function initAnimations() {
+    // Check if these functions exist in animations.js before calling them
+    if (typeof initParallaxEffect === 'function') {
+        initParallaxEffect();
+    }
+    
+    if (typeof init3DCardEffect === 'function') {
+        init3DCardEffect();
+    }
+    
+    if (typeof initScrollAnimations === 'function') {
+        initScrollAnimations();
+    }
+}

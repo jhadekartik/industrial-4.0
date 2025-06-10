@@ -33,8 +33,13 @@ function navigateToUnits() {
     setTimeout(function() {
         // Check if we're in a unit page or elsewhere
         const path = window.location.pathname;
+        console.log("Current path:", path); // Debug log
+        
         if (path.includes('/units/')) {
             window.location.href = '../units.html';
+        } else if (path.includes('/units.html')) {
+            // If we're already on the units page, go to index
+            window.location.href = 'index.html';
         } else {
             window.location.href = 'units.html';
         }
